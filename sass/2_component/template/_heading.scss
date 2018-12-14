@@ -1,0 +1,35 @@
+/*========================================
+Heading
+=========================================*/
+
+/*　c-tpl-heading01
+-----------------------------------------*/
+
+.c-tpl-heading01{
+
+}
+
+.c-tpl-heading01 > em{
+	font-family: $font-family--webfont;
+	font-size: $font-size--8;
+				@include media-breakpoint-down(md) {
+						font-size: $font-size--5;
+				}
+}
+
+.c-tpl-heading01__caption{
+	font-family: $font-family--en;
+	color: $color--secondary;
+}
+
+
+/*　c-tpl-heading01
+-----------------------------------------*/
+
+.c-tpl-heading02{
+	font-family: $font-family--webfont;
+	font-size: $font-size--5;
+				@include media-breakpoint-down(md) {
+						font-size: $font-size--4;
+				}
+}

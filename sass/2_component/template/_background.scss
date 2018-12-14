@@ -1,0 +1,47 @@
+/*========================================
+Background
+=========================================*/
+
+/*　c-bg-image
+-----------------------------------------*/
+
+.c-tpl-bg-image{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+
+	&.is-bg-overlay,
+	&.is-bg-overlay--primary,
+	&.is-bg-overlay--secondary,
+	&.is-bg-overlay--success,
+	&.is-bg-overlay--info,
+	&.is-bg-overlay--danger,
+	&.is-bg-overlay--white
+	{
+	position: relative;
+
+		> *{position: relative;}
+
+			&:before{
+				content:"";
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 0;
+				width: 100%;
+				height: 100%;
+			}
+	}
+
+	&.is-bg-overlay:before{background-color: rgba(black,0.8);}
+	&.is-bg-overlay--primary:before{background-color: rgba(darken($color--primary,15%),0.8);}
+	&.is-bg-overlay--secondary:before{background-color: rgba(darken($color--secondary,15%),0.8);}
+	&.is-bg-overlay--success:before{background-color: rgba(darken($color--success,15%),0.8);}
+	&.is-bg-overlay--info:before{background-color: rgba(darken($color--info,15%),0.8);}
+	&.is-bg-overlay--danger:before{background-color: rgba(darken($color--danger,15%),0.8);}
+	&.is-bg-overlay--white:before{background-color: rgba(white,0.8);}
+
+	&.is-bg-attachment{background-attachment: fixed;}
+
+}

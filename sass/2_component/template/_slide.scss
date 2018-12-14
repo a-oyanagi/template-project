@@ -1,0 +1,56 @@
+/*========================================
+Slide
+=========================================*/
+
+/*　中項目
+-----------------------------------------*/
+
+/*  小項目  */
+.c-tpl-slide01 {
+	width: 100%;
+	min-width: $container--md;
+	overflow: hidden;
+
+	.slick-list{height: 100%;}
+	.slick-track{height: 100%;}
+
+							@include media-breakpoint-down(sm) {
+								min-width: 0;
+							}
+}
+
+.c-tpl-slide01__item {
+	width: 100%;
+	min-width: $container--md;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+
+				@include media-breakpoint-down(sm) {
+						min-width: 0;
+				}
+
+	&:focus{
+		outline:none;
+	}
+
+}
+
+.c-tpl-slide01__title {
+	width: 100%;
+	font-family: $font-family--webfont;
+	font-size: $font-size--5;
+	margin: 0 auto;
+	padding: 0 $pc-gutter-width;
+	letter-spacing: 0.06em;
+	line-height: 2em;
+
+				@include media-breakpoint-down(sm) {
+						max-width: none;
+						font-size: $font-size--4;
+						padding: $sp-gutter-width;
+				}
+
+}
+

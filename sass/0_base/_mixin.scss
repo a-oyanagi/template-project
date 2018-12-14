@@ -1,0 +1,171 @@
+/*≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+初期設定
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡*/
+
+/*========================================
+アニメーション
+=========================================*/
+
+@mixin animate($animation, $duration, $easing, $delay, $repeat, $fill) {
+  -webkit-animation: $animation $duration $easing $delay $repeat $fill;
+          animation: $animation $duration $easing $delay $repeat $fill;
+}
+
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+/* ====ボタンマウスオーバー==== */
+@include keyframes(hoverAction) {
+  0% { opacity: 1; }
+  2% { opacity: 1; }
+  16% { opacity: 0.86; }
+  50% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+
+/*========================================
+汎用移動アニメーション
+=========================================*/
+
+// フェードイン
+@include keyframes(fadeIn) {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+// 上から下
+@include keyframes(translateY-down--1) {
+  0% {opacity: 0; transform:translateY(-4px); }
+  100% {opacity: 1; transform:translateY(0px); }
+}
+@include keyframes(translateY-down--2) {
+  0% {opacity: 0; transform:translateY(-8px); }
+  100% {opacity: 1; transform:translateY(0px); }
+}
+@include keyframes(translateY-down--3) {
+  0% {opacity: 0; transform:translateY(-12px); }
+  100% {opacity: 1; transform:translateY(0px); }
+}
+
+
+// 下から上
+@include keyframes(translateY-up--1) {
+  0% {opacity: 0; transform:translateY(4px); }
+  100% {opacity: 1; transform:translateY(0px); }
+}
+@include keyframes(translateY-up--2) {
+  0% {opacity: 0; transform:translateY(8px); }
+  100% {opacity: 1; transform:translateY(0px); }
+}
+@include keyframes(translateY-up--3) {
+  0% {opacity: 0; transform:translateY(12px); }
+  100% {opacity: 1; transform:translateY(0px); }
+}
+
+
+// 左から右
+@include keyframes(translateX-next--1) {
+  0% {opacity: 0; transform:translateX(-4px); }
+  100% {opacity: 1; transform:translateX(0px); }
+}
+@include keyframes(translateX-next--2) {
+  0% {opacity: 0; transform:translateX(-8px); }
+  100% {opacity: 1; transform:translateX(0px); }
+}
+@include keyframes(translateX-next--3) {
+  0% {opacity: 0; transform:translateX(-12px); }
+  100% {opacity: 1; transform:translateX(0px); }
+}
+
+
+// 右から左
+@include keyframes(translateX-prev--1) {
+  0% {opacity: 0; transform:translateX(4px); }
+  100% {opacity: 1; transform:translateX(0px); }
+}
+@include keyframes(translateX-prev--2) {
+  0% {opacity: 0; transform:translateX(8px); }
+  100% {opacity: 1; transform:translateX(0px); }
+}
+@include keyframes(translateX-prev--3) {
+  0% {opacity: 0; transform:translateX(12px); }
+  100% {opacity: 1; transform:translateX(0px); }
+}
+
+
+// 画像マウスオーバー
+@include keyframes(mouseOverImg) {
+  0% {opacity: 1;}
+  20% {opacity: 0.74;}
+  100% {opacity: 1;}
+}
+
+
+
+/*========================================
+縦書き
+=========================================*/
+// ON
+@mixin writing-mode--vertical {
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  -o-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+// OFF
+@mixin writing-mode--horizontal {
+  -ms-writing-mode: lr-tb;
+  -webkit-writing-mode: horizontal-tb;
+  -o-writing-mode: horizontal-tb;
+  writing-mode: horizontal-tb;
+}
+
+/*========================================
+レスポンシブ
+=========================================*/
+@mixin max-screen($screen-xs) {
+  @media screen and (max-width: $screen-xs) {
+    @content;
+  }
+}
+
+@mixin min-screen($screen-xs) {
+  @media screen and (min-width: $screen-xs) {
+    @content;
+  }
+}
+
+@mixin max-height-screen($screen-xs) {
+  @media screen and (max-height: $screen-xs) {
+    @content;
+  }
+}
+
+
+/*========================================
+SVG読み込み　文字置換
+=========================================*/
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}

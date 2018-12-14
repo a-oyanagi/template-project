@@ -1,0 +1,230 @@
+
+/*=======================================
+フォントサイズ
+=========================================*/
+.u-fz--1{font-size:$font-size--1 !important; }
+.u-fz--2{font-size:$font-size--2 !important; }
+.u-fz--3{font-size:$font-size--3 !important; }
+.u-fz--4{font-size:$font-size--4 !important; }
+.u-fz--5{font-size:$font-size--5 !important; }
+.u-fz--6{font-size:$font-size--6 !important; }
+.u-fz--7{font-size:$font-size--7 !important; }
+.u-fz--8{font-size:$font-size--8 !important; }
+
+@include media-breakpoint-up(sm) {
+  .u-fz-sm--1{font-size:$font-size--1 !important; }
+  .u-fz-sm--2{font-size:$font-size--2 !important; }
+  .u-fz-sm--3{font-size:$font-size--3 !important; }
+  .u-fz-sm--4{font-size:$font-size--4 !important; }
+  .u-fz-sm--5{font-size:$font-size--5 !important; }
+  .u-fz-sm--6{font-size:$font-size--6 !important; }
+  .u-fz-sm--7{font-size:$font-size--7 !important; }
+  .u-fz-sm--8{font-size:$font-size--8 !important; }
+}
+@include media-breakpoint-up(md) {
+  .u-fz-md--1{font-size:$font-size--1 !important; }
+  .u-fz-md--2{font-size:$font-size--2 !important; }
+  .u-fz-md--3{font-size:$font-size--3 !important; }
+  .u-fz-md--4{font-size:$font-size--4 !important; }
+  .u-fz-md--5{font-size:$font-size--5 !important; }
+  .u-fz-md--6{font-size:$font-size--6 !important; }
+  .u-fz-md--7{font-size:$font-size--7 !important; }
+  .u-fz-md--8{font-size:$font-size--8 !important; }
+}
+@include media-breakpoint-up(lg) {
+  .u-fz-lg--1{font-size:$font-size--1 !important; }
+  .u-fz-lg--2{font-size:$font-size--2 !important; }
+  .u-fz-lg--3{font-size:$font-size--3 !important; }
+  .u-fz-lg--4{font-size:$font-size--4 !important; }
+  .u-fz-lg--5{font-size:$font-size--5 !important; }
+  .u-fz-lg--6{font-size:$font-size--6 !important; }
+  .u-fz-lg--7{font-size:$font-size--7 !important; }
+  .u-fz-lg--8{font-size:$font-size--8 !important; }
+}
+@include media-breakpoint-up(xl) {
+  .u-fz-xl--1{font-size:$font-size--1 !important; }
+  .u-fz-xl--2{font-size:$font-size--2 !important; }
+  .u-fz-xl--3{font-size:$font-size--3 !important; }
+  .u-fz-xl--4{font-size:$font-size--4 !important; }
+  .u-fz-xl--5{font-size:$font-size--5 !important; }
+  .u-fz-xl--6{font-size:$font-size--6 !important; }
+  .u-fz-xl--7{font-size:$font-size--7 !important; }
+  .u-fz-xl--8{font-size:$font-size--8 !important; }
+}
+
+
+
+/*=======================================
+サイズ指定　※tableやinputにて使用
+=========================================*/
+
+.u-w--10 { width: 10%;}
+.u-w--20 { width: 20%;}
+.u-w--30 { width: 30%;}
+.u-w--40 { width: 40%;}
+.u-w--50 { width: 50%;}
+.u-w--60 { width: 60%;}
+.u-w--70 { width: 70%;}
+.u-w--80 { width: 80%;}
+.u-w--90 { width: 90%;}
+.u-w--100 { width: 100%;}
+
+@include media-breakpoint-up(sm) {
+  .u-w-sm--10 { width: 10%;}
+  .u-w-sm--20 { width: 20%;}
+  .u-w-sm--30 { width: 30%;}
+  .u-w-sm--40 { width: 40%;}
+  .u-w-sm--50 { width: 50%;}
+  .u-w-sm--60 { width: 60%;}
+  .u-w-sm--70 { width: 70%;}
+  .u-w-sm--80 { width: 80%;}
+  .u-w-sm--90 { width: 90%;}
+  .u-w-sm--100 { width: 100%;}
+}
+@include media-breakpoint-up(md) {
+  .u-w-md--10 { width: 10%;}
+  .u-w-md--20 { width: 20%;}
+  .u-w-md--30 { width: 30%;}
+  .u-w-md--40 { width: 40%;}
+  .u-w-md--50 { width: 50%;}
+  .u-w-md--60 { width: 60%;}
+  .u-w-md--70 { width: 70%;}
+  .u-w-md--80 { width: 80%;}
+  .u-w-md--90 { width: 90%;}
+  .u-w-md--100 { width: 100%;}
+}
+@include media-breakpoint-up(lg) {
+  .u-w-lg--10 { width: 10%;}
+  .u-w-lg--20 { width: 20%;}
+  .u-w-lg--30 { width: 30%;}
+  .u-w-lg--40 { width: 40%;}
+  .u-w-lg--50 { width: 50%;}
+  .u-w-lg--60 { width: 60%;}
+  .u-w-lg--70 { width: 70%;}
+  .u-w-lg--80 { width: 80%;}
+  .u-w-lg--90 { width: 90%;}
+  .u-w-lg--100 { width: 100%;}
+}
+@include media-breakpoint-up(xl) {
+  .u-w-xl--10 { width: 10%;}
+  .u-w-xl--20 { width: 20%;}
+  .u-w-xl--30 { width: 30%;}
+  .u-w-xl--40 { width: 40%;}
+  .u-w-xl--50 { width: 50%;}
+  .u-w-xl--60 { width: 60%;}
+  .u-w-xl--70 { width: 70%;}
+  .u-w-xl--80 { width: 80%;}
+  .u-w-xl--90 { width: 90%;}
+  .u-w-xl--100 { width: 100%;}
+}
+
+/*=======================================
+フォント指定
+=========================================*/
+.u-ff--ja{font-family: $font-family--webfont !important;}
+.u-ff--en{font-family: $font-family--en !important;}
+
+/*=======================================
+高さのサイズ指定
+=========================================*/
+.u-h--auto { min-height: 0; height: auto;}
+.u-h--10 { min-height: 60px; height: 10vh;}
+.u-h--20 { min-height: 120px; height: 20vh;}
+.u-h--30 { min-height: 180px; height: 30vh;}
+.u-h--40 { min-height: 240px; height: 40vh;}
+.u-h--50 { min-height: 300px; height: 50vh;}
+.u-h--60 { min-height: 360px; height: 60vh;}
+.u-h--70 { min-height: 420px; height: 70vh;}
+.u-h--80 { min-height: 480px; height: 80vh;}
+.u-h--90 { min-height: 540px; height: 90vh;}
+.u-h--100 { min-height: 600px; height: 100vh;}
+
+@include media-breakpoint-up(sm) {
+  .u-h-sm--auto { min-height: 0; height: auto;}
+  .u-h-sm--10 { min-height: 60px; height: 10vh;}
+  .u-h-sm--20 { min-height: 120px; height: 20vh;}
+  .u-h-sm--30 { min-height: 180px; height: 30vh;}
+  .u-h-sm--40 { min-height: 240px; height: 40vh;}
+  .u-h-sm--50 { min-height: 300px; height: 50vh;}
+  .u-h-sm--60 { min-height: 360px; height: 60vh;}
+  .u-h-sm--70 { min-height: 420px; height: 70vh;}
+  .u-h-sm--80 { min-height: 480px; height: 80vh;}
+  .u-h-sm--90 { min-height: 540px; height: 90vh;}
+  .u-h-sm--100 { min-height: 600px; height: 100vh;}
+}
+@include media-breakpoint-up(md) {
+  .u-h-md--auto { min-height: 0; height: auto;}
+  .u-h-md--10 { min-height: 60px; height: 10vh;}
+  .u-h-md--20 { min-height: 120px; height: 20vh;}
+  .u-h-md--30 { min-height: 180px; height: 30vh;}
+  .u-h-md--40 { min-height: 240px; height: 40vh;}
+  .u-h-md--50 { min-height: 300px; height: 50vh;}
+  .u-h-md--60 { min-height: 360px; height: 60vh;}
+  .u-h-md--70 { min-height: 420px; height: 70vh;}
+  .u-h-md--80 { min-height: 480px; height: 80vh;}
+  .u-h-md--90 { min-height: 540px; height: 90vh;}
+  .u-h-md--100 { min-height: 600px; height: 100vh;}
+}
+@include media-breakpoint-up(lg) {
+  .u-h-lg--auto { min-height: 0; height: auto;}
+  .u-h-lg--10 { min-height: 60px; height: 10vh;}
+  .u-h-lg--20 { min-height: 120px; height: 20vh;}
+  .u-h-lg--30 { min-height: 180px; height: 30vh;}
+  .u-h-lg--40 { min-height: 240px; height: 40vh;}
+  .u-h-lg--50 { min-height: 300px; height: 50vh;}
+  .u-h-lg--60 { min-height: 360px; height: 60vh;}
+  .u-h-lg--70 { min-height: 420px; height: 70vh;}
+  .u-h-lg--80 { min-height: 480px; height: 80vh;}
+  .u-h-lg--90 { min-height: 540px; height: 90vh;}
+  .u-h-lg--100 { min-height: 600px; height: 100vh;}
+}
+@include media-breakpoint-up(xl) {
+  .u-h-xl--auto { min-height: 0; height: auto;}
+  .u-h-xl--10 { min-height: 60px; height: 10vh;}
+  .u-h-xl--20 { min-height: 120px; height: 20vh;}
+  .u-h-xl--30 { min-height: 180px; height: 30vh;}
+  .u-h-xl--40 { min-height: 240px; height: 40vh;}
+  .u-h-xl--50 { min-height: 300px; height: 50vh;}
+  .u-h-xl--60 { min-height: 360px; height: 60vh;}
+  .u-h-xl--70 { min-height: 420px; height: 70vh;}
+  .u-h-xl--80 { min-height: 480px; height: 80vh;}
+  .u-h-xl--90 { min-height: 540px; height: 90vh;}
+  .u-h-xl--100 { min-height: 600px; height: 100vh;}
+}
+
+/*=======================================
+下線
+=========================================*/
+.u-td--underline{text-decoration: underline;}
+.u-td--none{text-decoration: none;}
+
+/*=======================================
+行間
+=========================================*/
+.u-lh--0{line-height: 1;}
+.u-lh--1{line-height: 1.4;}
+.u-lh--2{line-height: 1.6;} //通常
+.u-lh--3{line-height: 1.8;}
+.u-lh--4{line-height: 2.2;}
+
+/*=======================================
+文字間
+=========================================*/
+.u-ls--0{letter-spacing: 0em;}
+.u-ls--1{letter-spacing: 0.02em;}
+.u-ls--2{letter-spacing: 0.06em;}
+.u-ls--3{letter-spacing: 0.1em;}
+.u-ls--4{letter-spacing: 0.14em;}
+
+
+/*=======================================
+スマホでの左右余白を調整
+=========================================*/
+@include media-breakpoint-down(sm) {
+		.u-bg-no-gutters{
+			margin-left: -$sp-gutter-width;
+			margin-right: -$sp-gutter-width;
+		}
+		.u-bg-no-gutters > .col, .u-bg-no-gutters > [class*="col-"] { padding-right: $sp-gutter-width; padding-left: $sp-gutter-width; }
+}
+

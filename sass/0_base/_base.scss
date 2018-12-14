@@ -1,0 +1,294 @@
+/*≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+初期設定
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡*/
+
+/* タグの表示調整
+-----------------------------------------*/
+html{;font-size: 62.5%;}
+h1, h2, h3, h4, h5, h6, div, p, ul, ol, dl, dt, dd, form,header,footer,section,article{
+	font-size:$font-size--2;padding: 0;line-height: 1.6;display: block;margin: 0px;
+
+				@include media-breakpoint-down(sm) {
+					font-size:$font-size--1;
+				}
+
+
+}
+em{font-style: normal;}
+b{font-weight: normal;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+table {
+	line-height: 1.6;font-size:$font-size--2;margin : 0;
+
+				@include media-breakpoint-down(sm) {
+					font-size:$font-size--1;
+				}
+
+}
+img {border: none;vertical-align: bottom;}
+
+ul,ol{
+	display: block;
+	font-size:$font-size--2;
+	line-height: 1.6;
+	margin: 0px;
+	padding-left: 1.5em;
+
+				 @include media-breakpoint-down(sm) {
+					font-size:$font-size--1;
+				}
+}
+
+
+/* フォント指定・背景指定
+-----------------------------------------*/
+body{
+	color: $color--text;
+	background: $color--background;
+}
+
+/* リンクカラー設定
+-----------------------------------------*/
+a{
+//	color: $color--textLink;
+
+//		&:hover{
+//			color: lighten( $color--textLink, 10% );
+//		}
+//		&:focus{
+//			color: $color--textLink;
+//		}
+}
+
+p{
+	line-height: 1.8;
+	letter-spacing: 0.04em;
+}
+
+
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+// ここから記述
+.slick-dots{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+
+.slick-dots > li{
+    display: inline-block;
+    margin: 0 2px;
+    padding: 0;
+                @include media-breakpoint-down(sm) {
+                    margin: 0;
+                }
+
+}
+
+.slick-dots > li > button{
+    border: none;
+    background: none;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: lighten($color--text,60%);
+    border-radius: 20px;
+    border: 8px solid $color--background;
+    font-size: 10px;
+    text-indent: -9999px;
+    transition: all 0.4s;
+    margin: 0;
+    padding: 0;
+    cursor:pointer;
+
+                @include media-breakpoint-down(sm) {
+                    width: 24px;
+                    height: 24px;
+                }
+
+    &:focus{
+        outline: none;
+    }
+}
+
+.slick-active > button{
+    transform:scale(1.4);
+    background: $color--primary !important;
+}
+
+/*========================================
+矢印
+=========================================*/
+
+$arrow01:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12'%3E%3Cpath fill='#FFFFFF' d='M0,10.8L1.333,12,8,6,1.333,0,0,1.2,5.333,6Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow01--text:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12'%3E%3Cpath fill='#{$color--text}' d='M0,10.8L1.333,12,8,6,1.333,0,0,1.2,5.333,6Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+
+$arrow01--primary:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12'%3E%3Cpath fill='#{$color--primary}' d='M0,10.8L1.333,12,8,6,1.333,0,0,1.2,5.333,6Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow01--secondary:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12'%3E%3Cpath fill='#{$color--secondary}' d='M0,10.8L1.333,12,8,6,1.333,0,0,1.2,5.333,6Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow01--success:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12'%3E%3Cpath fill='#{$color--success}' d='M0,10.8L1.333,12,8,6,1.333,0,0,1.2,5.333,6Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow01--info:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12'%3E%3Cpath fill='#{$color--info}' d='M0,10.8L1.333,12,8,6,1.333,0,0,1.2,5.333,6Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow01--textLink:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12'%3E%3Cpath fill='#{$color--textLink}' d='M0,10.8L1.333,12,8,6,1.333,0,0,1.2,5.333,6Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow01--warning:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12'%3E%3Cpath fill='#{$color--warning}' d='M0,10.8L1.333,12,8,6,1.333,0,0,1.2,5.333,6Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow01--danger:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12'%3E%3Cpath fill='#{$color--danger}' d='M0,10.8L1.333,12,8,6,1.333,0,0,1.2,5.333,6Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow01--light:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12'%3E%3Cpath fill='#{$gray-600}' d='M0,10.8L1.333,12,8,6,1.333,0,0,1.2,5.333,6Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow01--dark:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12'%3E%3Cpath fill='#{$dark}' d='M0,10.8L1.333,12,8,6,1.333,0,0,1.2,5.333,6Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow02:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#FFFFFF' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0ZM10,18V7l7,5.5Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow02--text:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--text}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0ZM10,18V7l7,5.5Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow02--primary:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--primary}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0ZM10,18V7l7,5.5Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow02--secondary:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--secondary}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0ZM10,18V7l7,5.5Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+
+$arrow02--success:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--success}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0ZM10,18V7l7,5.5Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow02--info:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--info}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0ZM10,18V7l7,5.5Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow02--textLink:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--textLink}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0ZM10,18V7l7,5.5Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow02--warning:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--warning}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0ZM10,18V7l7,5.5Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow02--danger:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--danger}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0ZM10,18V7l7,5.5Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow02--light:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$gray-600}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0ZM10,18V7l7,5.5Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow02--dark:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$dark}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0ZM10,18V7l7,5.5Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+
+
+$arrow03:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#FFFFFF' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm0,24A11.5,11.5,0,1,1,24,12.5,11.5129,11.5129,0,0,1,12.5,24ZM10,18l7-5.5L10,7Zm1-8.9424L15.3813,12.5,11,15.9424Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow03--text:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--text}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm0,24A11.5,11.5,0,1,1,24,12.5,11.5129,11.5129,0,0,1,12.5,24ZM10,18l7-5.5L10,7Zm1-8.9424L15.3813,12.5,11,15.9424Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow03--primary:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--primary}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm0,24A11.5,11.5,0,1,1,24,12.5,11.5129,11.5129,0,0,1,12.5,24ZM10,18l7-5.5L10,7Zm1-8.9424L15.3813,12.5,11,15.9424Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow03--secondary:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--secondary}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm0,24A11.5,11.5,0,1,1,24,12.5,11.5129,11.5129,0,0,1,12.5,24ZM10,18l7-5.5L10,7Zm1-8.9424L15.3813,12.5,11,15.9424Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow03--success:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--success}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm0,24A11.5,11.5,0,1,1,24,12.5,11.5129,11.5129,0,0,1,12.5,24ZM10,18l7-5.5L10,7Zm1-8.9424L15.3813,12.5,11,15.9424Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow03--info:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--info}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm0,24A11.5,11.5,0,1,1,24,12.5,11.5129,11.5129,0,0,1,12.5,24ZM10,18l7-5.5L10,7Zm1-8.9424L15.3813,12.5,11,15.9424Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow03--textLink:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--textLink}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm0,24A11.5,11.5,0,1,1,24,12.5,11.5129,11.5129,0,0,1,12.5,24ZM10,18l7-5.5L10,7Zm1-8.9424L15.3813,12.5,11,15.9424Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow03--warning:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--warning}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm0,24A11.5,11.5,0,1,1,24,12.5,11.5129,11.5129,0,0,1,12.5,24ZM10,18l7-5.5L10,7Zm1-8.9424L15.3813,12.5,11,15.9424Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow03--danger:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$color--danger}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm0,24A11.5,11.5,0,1,1,24,12.5,11.5129,11.5129,0,0,1,12.5,24ZM10,18l7-5.5L10,7Zm1-8.9424L15.3813,12.5,11,15.9424Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow03--light:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$gray-600}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm0,24A11.5,11.5,0,1,1,24,12.5,11.5129,11.5129,0,0,1,12.5,24ZM10,18l7-5.5L10,7Zm1-8.9424L15.3813,12.5,11,15.9424Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$arrow03--dark:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='#{$dark}' d='M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm0,24A11.5,11.5,0,1,1,24,12.5,11.5129,11.5129,0,0,1,12.5,24ZM10,18l7-5.5L10,7Zm1-8.9424L15.3813,12.5,11,15.9424Z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+
+

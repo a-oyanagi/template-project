@@ -1,0 +1,39 @@
+/*========================================
+大項目
+=========================================*/
+
+/*　.l-container
+-----------------------------------------*/
+.l-container{
+	width: 100%;
+	max-width: $container--lg;
+	min-width: $container--md;
+	margin: 0 auto;
+	padding: 0 $pc-gutter-width;
+	overflow: hidden;
+							@include media-breakpoint-down(sm) {
+								width: 100%;
+								max-width: none;
+								min-width: 0;
+								padding: 0 $sp-gutter-width;
+							}
+}
+
+/*　.l-container-fluid
+-----------------------------------------*/
+.l-container-fluid{
+	width: 100%;
+	min-width: $container--md;
+	margin: 0 auto;
+	padding: 0 $pc-gutter-width;
+	overflow: hidden;
+							@include media-breakpoint-down(sm) {
+								width: 100%;
+								min-width: 0;
+								padding: 0 $sp-gutter-width;
+							}
+}
+
+/*  小項目  */
+
+
