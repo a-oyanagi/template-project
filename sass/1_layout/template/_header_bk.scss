@@ -59,15 +59,22 @@ https://goo.gl/forms/MQQmWYIqnJu0hNrj2
 
 }
 
+
 .l-tpl-header01__sub {
+	width: calc(100% - 320px);
 	display: flex;
-	flex-basis:auto;
-	flex-grow:1;
 	flex-direction:column;
 	align-items:flex-end;
 	justify-content:flex-end;
 	flex-wrap:wrap;
 
+				@include media-breakpoint-down(sm) {
+						width: calc(100% - 180px);
+				}
+
+				@include media-breakpoint-down(xs) {
+						width: calc(100% - 140px);
+				}
 
 }
 
@@ -347,13 +354,20 @@ https://goo.gl/forms/MQQmWYIqnJu0hNrj2
 }
 
 .l-tpl-header02__sub {
+	width: calc(100% - 260px);
 	display: flex;
-	flex-basis:auto;
-	flex-grow:1;
 	flex-direction:row;
 	align-items:center;
 	justify-content:flex-end;
 	flex-wrap:wrap;
+
+				@include media-breakpoint-down(sm) {
+						width: calc(100% - 180px);
+				}
+
+				@include media-breakpoint-down(xs) {
+						width: calc(100% - 140px);
+				}
 
 }
 
@@ -640,13 +654,18 @@ https://goo.gl/forms/MQQmWYIqnJu0hNrj2
 
 .l-tpl-header03__sub {
 	display: flex;
-	flex-basis:auto;
-	flex-grow:1;
 	flex-direction:row;
 	align-items:center;
 	justify-content:flex-end;
 	flex-wrap:nowrap;
 
+				@include media-breakpoint-down(sm) {
+						width: calc(100% - 180px);
+				}
+
+				@include media-breakpoint-down(xs) {
+						width: calc(100% - 140px);
+				}
 
 }
 

@@ -103,8 +103,8 @@ $btn-padding-x:               1.25rem !default;
 $btn-border-radius:           .25rem;
 
 // nav
-//$nav-link-padding-y:                1.5rem !default;
-//$nav-link-padding-x:                2rem !default;
+$nav-link-padding-y:                1.4rem !default;
+$nav-link-padding-x:                1.8rem !default;
 //$nav-tabs-border-color:             $color--primary !default;
 //$nav-tabs-border-width:             1px !default;
 //$nav-tabs-border-radius:            0 !default;
@@ -113,6 +113,10 @@ $btn-border-radius:           .25rem;
 //$nav-tabs-link-active-bg:           $color--primary !default;
 //$nav-tabs-link-active-border-color: darken($color--primary,3%) !default;
 
+// navbar
+//$navbar-padding-y:                  ($spacer / 2) !default;
+//$navbar-padding-x:                  $spacer !default;
+$navbar-nav-link-padding-x:         1rem !default;
 
 @import "../bootstrap/scss/variables";
 @import "../bootstrap/scss/mixins";

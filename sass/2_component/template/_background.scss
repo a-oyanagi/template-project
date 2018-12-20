@@ -17,6 +17,7 @@ https://goo.gl/forms/MQQmWYIqnJu0hNrj2
 	&.is-bg-overlay--secondary,
 	&.is-bg-overlay--success,
 	&.is-bg-overlay--info,
+	&.is-bg-overlay--warning,
 	&.is-bg-overlay--danger,
 	&.is-bg-overlay--white
 	{
@@ -41,6 +42,7 @@ https://goo.gl/forms/MQQmWYIqnJu0hNrj2
 	&.is-bg-overlay--secondary:before{background-color: rgba(darken($color--secondary,15%),0.8);}
 	&.is-bg-overlay--success:before{background-color: rgba(darken($color--success,15%),0.8);}
 	&.is-bg-overlay--info:before{background-color: rgba(darken($color--info,15%),0.8);}
+	&.is-bg-overlay--warning:before{background-color: rgba(darken($color--warning,15%),0.8);}
 	&.is-bg-overlay--danger:before{background-color: rgba(darken($color--danger,15%),0.8);}
 	&.is-bg-overlay--white:before{background-color: rgba(white,0.8);}
 
