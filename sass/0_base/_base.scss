@@ -191,7 +191,7 @@ p{
     display: block;
     width: 26px;
     height: 26px;
-    background: lighten($color--text,60%);
+    background: rgba($color--text,0.4);
     border-radius: 20px;
     border: 8px solid $color--background;
     font-size: 10px;
@@ -212,7 +212,6 @@ p{
 }
 
 .slick-active > button{
-    transform:scale(1.4);
     background: $color--primary !important;
 }
 

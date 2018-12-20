@@ -1,5 +1,7 @@
 /*========================================
 Background
+-feedback form url
+https://goo.gl/forms/MQQmWYIqnJu0hNrj2
 =========================================*/
 
 /*　c-bg-image
@@ -45,3 +47,9 @@ Background
 	&.is-bg-attachment{background-attachment: fixed;}
 
 }
+
+
+
+/*  COMPONENTページ用に作成  */
+.c-tpl-bg-text{background: $color--text;}
+.c-tpl-bg-textLink{background: $color--textLink;}

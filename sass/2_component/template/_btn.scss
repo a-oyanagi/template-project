@@ -1,5 +1,7 @@
 /*========================================
-大項目
+Btn
+-feedback form url
+https://goo.gl/forms/MQQmWYIqnJu0hNrj2
 =========================================*/
 
 /*　中項目
@@ -12,12 +14,13 @@
 .c-tpl-btn01{
 	display: inline-block;
 	font-family: $font-family--webfont;
+	border: none;
 	padding: 12px 32px;
 	text-align: center;
 	color: white;
 	background: $color--text;
 	line-height: 1.4;
-	border-radius: 50px;
+	border-radius: 60px;
 	transition:0.2s all;
 
 			&:hover{
@@ -98,7 +101,7 @@
 	color: $color--text;
 	font-family: $font-family--webfont;
 	line-height: 1.4;
-	border-radius: 50px;
+	border-radius: 60px;
 	border: 1px solid $color--text;
 	transition:0.2s all;
 
@@ -207,7 +210,7 @@
 	background: $color--text;
 	border-bottom: 2px solid darken($color--text,15%);
 	line-height: 1.4;
-	border-radius: 50px;
+	border-radius: 60px;
 	transition:0.2s all;
 
 			&:hover{

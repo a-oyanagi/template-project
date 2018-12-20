@@ -1,0 +1,83 @@
+/*========================================
+Banner
+-feedback form url
+https://goo.gl/forms/MQQmWYIqnJu0hNrj2
+=========================================*/
+
+
+/*　c-tpl-banner-group
+-----------------------------------------*/
+.c-tpl-banner-group{
+	position: relative;
+	width: 100%;
+	list-style-type: none;
+	display: flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content: center;
+	flex-wrap:wrap;
+	margin: 0 auto;
+	padding: 6px $pc-gutter-width;
+
+				@include media-breakpoint-down(md) {
+					padding: 6px $sp-gutter-width;
+				}
+
+			.slick-list{padding: 5px 0;}
+
+}
+
+.c-tpl-banner-group__arrow__next{
+	position: absolute;
+	left: -3px;
+	top: 50%;
+	width: 30px;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	z-index: 3;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:center;
+	flex-wrap:nowrap;
+	transform: translateY(-50%);
+
+				@include media-breakpoint-down(md) {
+					left: -6px;
+				}
+
+			&:focus{outline: none;}
+			> *{font-size: $font-size--6; display: block; width: 30px; margin: 0; padding: 0;}
+}
+
+.c-tpl-banner-group__arrow__prev{
+	@extend .c-tpl-banner-group__arrow__next;
+	left: auto;
+	right: -3px;
+
+				@include media-breakpoint-down(md) {
+					right: -6px;
+				}
+}
+
+
+.c-tpl-banner-group__item{
+	width: 100%;
+	height: auto;
+	margin: 0 4px;
+
+			&:hover{
+			}
+							@include media-breakpoint-down(md) {
+								width: calc(50% - 4px);
+							}
+}
+
+.c-tpl-banner-group__item img{
+	width: 100%;
+	height: auto;
+}
