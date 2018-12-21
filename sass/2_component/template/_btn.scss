@@ -21,12 +21,12 @@ https://goo.gl/forms/MQQmWYIqnJu0hNrj2
 	background: $color--text;
 	line-height: 1.4;
 	border-radius: 60px;
-	transition:0.2s all;
 
 			&:hover{
 				color: $color--background;
 				text-decoration: none;
 				filter: brightness(110%);
+				transition:0.2s;
 			}
 
 }
@@ -103,12 +103,12 @@ https://goo.gl/forms/MQQmWYIqnJu0hNrj2
 	line-height: 1.4;
 	border-radius: 60px;
 	border: 1px solid $color--text;
-	transition:0.2s all;
 
 			&:hover{
 				color: $color--text;
 				text-decoration: none;
 				filter: brightness(110%);
+				transition:0.2s;
 			}
 
 }
@@ -208,15 +208,15 @@ https://goo.gl/forms/MQQmWYIqnJu0hNrj2
 	text-align: center;
 	color: white;
 	background: $color--text;
-	border-bottom: 2px solid darken($color--text,15%);
+	border-bottom: 3px solid darken($color--text,15%);
 	line-height: 1.4;
 	border-radius: 60px;
-	transition:0.2s all;
 
 			&:hover{
 				color: $color--background;
 				text-decoration: none;
 				filter: brightness(110%);
+				transition:0.2s;
 			}
 
 }
@@ -224,50 +224,50 @@ https://goo.gl/forms/MQQmWYIqnJu0hNrj2
 .c-tpl-btn03--primary{
 	@extend .c-tpl-btn03;
 	background: $color--primary;
-	border-bottom: 2px solid darken($color--primary,15%);
+	border-bottom: 3px solid darken($color--primary,15%);
 }
 
 .c-tpl-btn03--secondary{
 	@extend .c-tpl-btn03;
 	background: $color--secondary;
-	border-bottom: 2px solid darken($color--secondary,15%);
+	border-bottom: 3px solid darken($color--secondary,15%);
 }
 
 .c-tpl-btn03--success{
 	@extend .c-tpl-btn03;
 	background: $color--success;
-	border-bottom: 2px solid darken($color--success,15%);
+	border-bottom: 3px solid darken($color--success,15%);
 }
 
 .c-tpl-btn03--info{
 	@extend .c-tpl-btn03;
 	background: $color--info;
-	border-bottom: 2px solid darken($color--info,15%);
+	border-bottom: 3px solid darken($color--info,15%);
 }
 
 .c-tpl-btn03--textLink{
 	@extend .c-tpl-btn03;
 	background: $color--textLink;
-	border-bottom: 2px solid darken($color--textLink,15%);
+	border-bottom: 3px solid darken($color--textLink,15%);
 }
 
 .c-tpl-btn03--warning{
 	@extend .c-tpl-btn03;
 	background: $color--warning;
-	border-bottom: 2px solid darken($color--warning,15%);
+	border-bottom: 3px solid darken($color--warning,15%);
 }
 
 .c-tpl-btn03--danger{
 	@extend .c-tpl-btn03;
 	background: $color--danger;
-	border-bottom: 2px solid darken($color--danger,15%);
+	border-bottom: 3px solid darken($color--danger,15%);
 }
 
 .c-tpl-btn03--light{
 	@extend .c-tpl-btn03;
 	background: $gray-300;
 	color: $gray-600;
-	border-bottom: 2px solid darken($gray-300,15%);
+	border-bottom: 3px solid darken($gray-300,15%);
 			&:hover{
 				color: $gray-600;
 				filter: brightness(102%);
@@ -277,14 +277,14 @@ https://goo.gl/forms/MQQmWYIqnJu0hNrj2
 .c-tpl-btn03--dark{
 	@extend .c-tpl-btn03;
 	background: $dark;
-	border-bottom: 2px solid darken($dark,15%);
+	border-bottom: 3px solid darken($dark,15%);
 }
 
 .c-tpl-btn03--white{
 	@extend .c-tpl-btn03;
 	color: $color--text;
 	background: white;
-	border-bottom: 2px solid darken(white,15%);
+	border-bottom: 3px solid darken(white,15%);
 
 			&:hover{
 				color: $color--text;

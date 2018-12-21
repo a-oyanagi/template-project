@@ -88,3 +88,50 @@ https://goo.gl/forms/MQQmWYIqnJu0hNrj2
 }
 
 
+/*　.c-tpl-snsList
+-----------------------------------------*/
+
+.c-tpl-snsList{
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:center;
+	flex-wrap:nowrap;
+}
+
+.c-tpl-snsList__item{
+	margin: 0 4px;
+
+			&:first-child{
+				margin-left: 0;
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+}
+
+.c-tpl-snsList__link{
+	background: $dark;
+	display: block;
+	width: 34px;
+	height: 34px;
+	display: flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:center;
+	flex-wrap:nowrap;
+	border-radius: 20px;
+	transition:0.2s all;
+
+			&:hover{
+				filter:brightness(110%);
+			}
+
+			&.is-bg-facebook{background-color: #43609C;}
+			&.is-bg-twitter{background-color: #2CA7E0;}
+			&.is-bg-line{background-color: #00C300;}
+			&.is-bg-instagram{background-color: black;}
+}
+

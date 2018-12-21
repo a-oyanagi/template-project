@@ -232,3 +232,87 @@
 		.u-bg-no-gutters > .col, .u-bg-no-gutters > [class*="col-"] { padding-right: $sp-gutter-width; padding-left: $sp-gutter-width; }
 }
 
+/*=======================================
+縦書き
+=========================================*/
+// 縦
+.u-writing--vertical{
+-ms-writing-mode: tb-rl;
+-webkit-writing-mode: vertical-rl;
+-o-writing-mode: vertical-rl;
+writing-mode: vertical-rl;
+}
+
+@include media-breakpoint-up(sm) {
+	.u-writing-sm--vertical{
+	-ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	-o-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	}
+}
+@include media-breakpoint-up(md) {
+	.u-writing-md--vertical{
+	-ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	-o-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	}
+}
+@include media-breakpoint-up(lg) {
+	.u-writing-lg--vertical{
+	-ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	-o-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	}
+}
+@include media-breakpoint-up(xl) {
+	.u-writing-xl--vertical{
+	-ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	-o-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	}
+}
+
+// 横
+.u-writing--horizontal{
+-ms-writing-mode: lr-tb;
+-webkit-writing-mode: horizontal-tb;
+-o-writing-mode: horizontal-tb;
+writing-mode: horizontal-tb;
+}
+
+@include media-breakpoint-up(sm) {
+	.u-writing-sm--horizontal{
+	-ms-writing-mode: lr-tb;
+	-webkit-writing-mode: horizontal-tb;
+	-o-writing-mode: horizontal-tb;
+	writing-mode: horizontal-tb;
+	}
+}
+@include media-breakpoint-up(md) {
+	.u-writing-md--horizontal{
+	-ms-writing-mode: lr-tb;
+	-webkit-writing-mode: horizontal-tb;
+	-o-writing-mode: horizontal-tb;
+	writing-mode: horizontal-tb;
+	}
+}
+@include media-breakpoint-up(lg) {
+	.u-writing-lg--horizontal{
+	-ms-writing-mode: lr-tb;
+	-webkit-writing-mode: horizontal-tb;
+	-o-writing-mode: horizontal-tb;
+	writing-mode: horizontal-tb;
+	}
+}
+@include media-breakpoint-up(xl) {
+	.u-writing-xl--horizontal{
+	-ms-writing-mode: lr-tb;
+	-webkit-writing-mode: horizontal-tb;
+	-o-writing-mode: horizontal-tb;
+	writing-mode: horizontal-tb;
+	}
+}
